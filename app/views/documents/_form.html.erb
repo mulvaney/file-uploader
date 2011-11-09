@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :document %>
+    <%= f.file_field :document %>
+
+  <div class="field">
     <%= f.label :summary %><br />
     <%= f.text_field :summary %>
   </div>

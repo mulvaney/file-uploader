@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111109145313) do
+ActiveRecord::Schema.define(:version => 20111109150710) do
 
   create_table "documents", :force => true do |t|
     t.string "summary"
     t.string "uploaded_by"
     t.date   "updated_at"
     t.date   "created_at"
+    t.string "document"
   end
 
 end

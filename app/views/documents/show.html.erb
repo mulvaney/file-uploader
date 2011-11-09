@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+ <b>File:</b>
+  <%= link_to 'download', @document.document.url %>
+</p>
+
+<p>
   <b>Summary:</b>
   <%= @document.summary %>
 </p>
