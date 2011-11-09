@@ -4,8 +4,20 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+testuser:
+ email: testuser@localhost
+ encrypted_password: x
+ id: 1
+
+ # note that if you are not confirmed, you can't do anything
+ confirmed_at: 2011-10-01 
+
+# don't set a confirmed_at for this guy
+unconfirmed:
+ email: unconfirmed@localhost
+ encrypted_password: x
+ id: 2
+
+
+
+
