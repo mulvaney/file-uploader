@@ -18,6 +18,7 @@ end
 
 gem 'jquery-rails'
 
+gem 'devise'
 gem 'carrierwave'
 
 # To use ActiveModel has_secure_password

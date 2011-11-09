@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Summary</th>
-    <th>Uploaded by</th>
     <th>Updated at</th>
     <th>Created at</th>
     <th></th>
@@ -14,7 +13,7 @@
 <% @documents.each do |document| %>
   <tr>
     <td><%= document.summary %></td>
-    <td><%= document.uploaded_by %></td>
+
     <td><%= document.updated_at %></td>
     <td><%= document.created_at %></td>
     <td><%= link_to 'Show', document %></td>
