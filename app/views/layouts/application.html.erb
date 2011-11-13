@@ -7,11 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+ <div class="topbar">
+  <div class="fill">
+   <div class="container">
+     <a class="brand" href="/">File Uploader</a>
+     <ul class="nav">
+      <li class="active"><a href="#">Upload</a></li0>
+      <li><a href="#">Manage</a></li>
+     </ul>
+   </div>
+  </div>
+ </div><!-- topbar -->
 
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
+ <div class="container">
+  <div class="content">
 
-<%= yield %>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+
+   <%= yield %>
+
+  </div>
+ </div>
+
+ <footer>
+
+ </footer>
 
 </body>
 </html>

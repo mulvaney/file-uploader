@@ -1,17 +1,67 @@
-<h2>Sign in</h2>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.email_field :email %></p>
+<div class="page-header">
+ Header?
+</div>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+<div class="row">
+
+ <div class="span8">
+
+ 
+<%= form_for(resource, :as => resource_name,
+       :url => session_path(resource_name)) do |f| %>
+
+  <fieldset>
+   <legend>Sign in</legend>
+
+   <div class="clearfix">
+     <%= f.label :email %>
+     <div class="input">
+       <%= f.email_field :email %>
+     </div>
+   </div>
+
+   <div class="clearfix">
+    <%= f.label :password %>
+    <div class="input">
+       <%= f.password_field :password %>
+    </div>
+   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
+   <div class="clearfix">
+    <%= f.label :remember_me %>
+     <div class="input">
+       <%= f.check_box :remember_me %>
+     </div>
+   </div>
   <% end -%>
 
-  <p><%= f.submit "Sign in" %></p>
+  <div class="clearfix">
+   <div class="input">
+     <%= f.submit "Sign in", :class => 'btn success' %>
+   </div>
+  </div>
+
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+   <div class="input">
+     <%= link_to "Forgot your password?",
+           new_password_path(resource_name) %><br />
+     <%= link_to "Didn't receive confirmation instructions?", 
+          new_confirmation_path(resource_name) %>
+   </div>
+
+  </div> <!-- left side -->
+
+  <div class="span1">Or</div>
+  <div class="span4">
+
+
+
+  <%= button_to "Sign up", new_registration_path(resource_name), 
+       :class => 'btn primary' %><br />
+
+  </div>
+
+</div> <!-- row -->
